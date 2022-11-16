@@ -1,0 +1,10 @@
+Start: 
+1 0
+Path: 
+1 1
+1 2
+1 2
+Actions: 
+UUL
+Sensor Readings: 
+HNN
