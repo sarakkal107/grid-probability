@@ -7,7 +7,7 @@ class App(tk.Tk):
     def __init__(self, *args, **kwargs):
         tk.Tk.__init__(self, *args, **kwargs)
 
-        folder = "smallMaps"
+        folder = "maps"
         mapFile = open(folder + "/map1")
         mapText = []
         for line in mapFile.readlines():
@@ -15,7 +15,7 @@ class App(tk.Tk):
             mapText.append(line.split(' '))
         mapFile.close
 
-        dataFile = open(folder + "/map1_data1.txt", 'r')
+        dataFile = open(folder + "/map1_data3.txt", 'r')
         dataText = dataFile.read().splitlines()
         dataFile.close()
 
@@ -38,7 +38,7 @@ class App(tk.Tk):
         path = []
         for i in range(self.columns):
             path.append(tuple(map(int, dataText[i+3].split())))
-        print(path)
+        # print(path)
 
         self.canvas = tk.Canvas(
             self, width=w, height=h, borderwidth=0, highlightthickness=0)
@@ -73,10 +73,10 @@ class App(tk.Tk):
 
         # Generate Lines
         for i in range(len(actions)-1):
-            x1 = path[i][0] * self.cellwidth + self.cellwidth/2
-            y1 = path[i][1] * self.cellheight + self.cellheight/2
-            x2 = path[i+1][0] * self.cellwidth + self.cellwidth/2
-            y2 = path[i+1][1] * self.cellheight + self.cellheight/2
+            x1 = (path[i][0]+1) * self.cellwidth + self.cellwidth/2
+            y1 = (path[i][1]+1) * self.cellheight + self.cellheight/2
+            x2 = (path[i+1][0]+1) * self.cellwidth + self.cellwidth/2
+            y2 = (path[i+1][1]+1) * self.cellheight + self.cellheight/2
             self.lines = self.canvas.create_line(
                 x1, y1, x2, y2, fill="green", width=3)
 
@@ -84,8 +84,8 @@ class App(tk.Tk):
 
         # Generate Points
         for item in path:
-            x1 = item[0] * self.cellwidth + self.cellwidth/4
-            y1 = item[1] * self.cellheight + self.cellheight/4
+            x1 = (item[0]+1) * self.cellwidth + self.cellwidth/4
+            y1 = (item[1]+1) * self.cellheight + self.cellheight/4
             x2 = x1 + self.cellwidth - self.cellwidth/4*2
             y2 = y1 + self.cellheight - self.cellheight/4*2
             self.oval = self.canvas.create_oval(
