@@ -1,0 +1,16 @@
+Start: 
+4 2
+Path: 
+5 2
+5 2
+5 3
+5 4
+6 4
+6 4
+6 5
+6 4
+7 4
+Actions: 
+LLUULUUDL
+Sensor Readings: 
+HHHNHHHHH
