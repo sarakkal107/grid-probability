@@ -116,20 +116,30 @@ class App(tk.Tk):
             w/2, h-80, text="Actions: " + actions, font=('Helvetica 11 bold'), fill="black")
         self.canvas.create_text(w/2, h-65, text="Observations: " +
                                 observations, font=('Helvetica 11 bold'), fill="black")
+
         self.canvas.create_rectangle(
-            0+self.cellwidth, h-50, w-self.cellwidth, h-30, fill="black")
-        self.canvas.create_text(w/5*1, h-40, text="N",
-                                font=('Helvetica 11 bold'), fill="#E1E7FF")
-        self.canvas.create_text(w/5*2, h-40, text="H",
-                                font=('Helvetica 11 bold'), fill="#FDFFE1")
-        self.canvas.create_text(w/5*3, h-40, text="T",
-                                font=('Helvetica 11 bold'), fill="#FFE1FF")
-        self.canvas.create_text(w/5*4, h-40, text="B",
-                                font=('Helvetica 11 bold'), fill="red")
-        # self.canvas.create_rectangle(0+self.cellwidth, h-10, w-self.cellwidth, h-10, fill="black")
-        self.canvas.create_text(w/3*1, h-20, text="START",
+            0+self.cellwidth, h-50, (w-30)/4*1, h-30, fill="#E1E7FF")
+        self.canvas.create_rectangle(
+            (w-30)/4*1, h-50, (w-30)/4*2, h-30, fill="#FDFFE1")
+        self.canvas.create_rectangle(
+            (w-30)/4*2, h-50, (w-30)/4*3, h-30, fill="#FFE1FF")
+        self.canvas.create_rectangle(
+            (w-30)/4*3, h-50, w-self.cellwidth, h-30, fill="red")
+
+        self.canvas.create_text((((w-30)/4*1) + 15)/2, h-40, text="N",
+                                font=('Helvetica 11 bold'), fill="black")
+        self.canvas.create_text((((w-30)/4*1) + ((w-30)/4*2))/2, h-40, text="H",
+                                font=('Helvetica 11 bold'), fill="black")
+        self.canvas.create_text((((w-30)/4*2) + ((w-30)/4*3))/2, h-40, text="T",
+                                font=('Helvetica 11 bold'), fill="black")
+        self.canvas.create_text((((w-30)/4*3) + ((w-30)/4*4))/2, h-40, text="B",
+                                font=('Helvetica 11 bold'), fill="black")
+
+        self.canvas.create_rectangle(
+            0+self.cellwidth, h-30, w-self.cellwidth, h-10, fill="black")
+        self.canvas.create_text(w/3*1, h-20, text="Starting Point",
                                 font=('Helvetica 11 bold'), fill="#FFBF00")
-        self.canvas.create_text(w/3*2, h-20, text="END",
+        self.canvas.create_text(w/3*2, h-20, text="Ending Point",
                                 font=('Helvetica 11 bold'), fill="#74C365")
 
 
