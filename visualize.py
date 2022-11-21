@@ -25,7 +25,7 @@ class App(tk.Tk):
         self.cellheight = 16
 
         w = self.columns*self.cellwidth+2*self.cellwidth
-        h = self.rows*self.cellheight+100
+        h = self.rows*self.cellheight+120
 
         if (w < 300):
             w = 300
@@ -89,28 +89,48 @@ class App(tk.Tk):
             x2 = x1 + self.cellwidth - self.cellwidth/4*2
             y2 = y1 + self.cellheight - self.cellheight/4*2
             self.oval = self.canvas.create_oval(
-                x1, y1, x2, y2, fill="green", tags="point")
+                x1, y1, x2, y2, fill="#F0FFF0", tags="point")
 
             #print(str(x1) + "," + str(y1) + " -> " + str(x2) + "," + str(y2))
 
+        # Recolor first point
+        x1 = (path[0][0]+1) * self.cellwidth + self.cellwidth/4
+        y1 = (path[0][1]+1) * self.cellheight + self.cellheight/4
+        x2 = x1 + self.cellwidth - self.cellwidth/4*2
+        y2 = y1 + self.cellheight - self.cellheight/4*2
+        self.oval = self.canvas.create_oval(
+            x1, y1, x2, y2, fill="#FFBF00", tags="point")
+
+        # Recolor last point
+        x1 = (path[len(path)-1][0]+1) * self.cellwidth + self.cellwidth/4
+        y1 = (path[len(path)-1][1]+1) * self.cellheight + self.cellheight/4
+        x2 = x1 + self.cellwidth - self.cellwidth/4*2
+        y2 = y1 + self.cellheight - self.cellheight/4*2
+        self.oval = self.canvas.create_oval(
+            x1, y1, x2, y2, fill="#74C365", tags="point")
         initial = tuple(map(int, dataText[1].split()))
 
         # print(path)
 
         self.canvas.create_text(
-            w/2, h-60, text="Actions: " + actions, font=('Helvetica 11 bold'), fill="black")
-        self.canvas.create_text(w/2, h-45, text="Observations: " +
+            w/2, h-80, text="Actions: " + actions, font=('Helvetica 11 bold'), fill="black")
+        self.canvas.create_text(w/2, h-65, text="Observations: " +
                                 observations, font=('Helvetica 11 bold'), fill="black")
         self.canvas.create_rectangle(
-            0+self.cellwidth, h-30, w-self.cellwidth, h-10, fill="black")
-        self.canvas.create_text(w/5*1, h-20, text="N",
+            0+self.cellwidth, h-50, w-self.cellwidth, h-30, fill="black")
+        self.canvas.create_text(w/5*1, h-40, text="N",
                                 font=('Helvetica 11 bold'), fill="#E1E7FF")
-        self.canvas.create_text(w/5*2, h-20, text="H",
+        self.canvas.create_text(w/5*2, h-40, text="H",
                                 font=('Helvetica 11 bold'), fill="#FDFFE1")
-        self.canvas.create_text(w/5*3, h-20, text="T",
+        self.canvas.create_text(w/5*3, h-40, text="T",
                                 font=('Helvetica 11 bold'), fill="#FFE1FF")
-        self.canvas.create_text(w/5*4, h-20, text="B",
+        self.canvas.create_text(w/5*4, h-40, text="B",
                                 font=('Helvetica 11 bold'), fill="red")
+        # self.canvas.create_rectangle(0+self.cellwidth, h-10, w-self.cellwidth, h-10, fill="black")
+        self.canvas.create_text(w/3*1, h-20, text="START",
+                                font=('Helvetica 11 bold'), fill="#FFBF00")
+        self.canvas.create_text(w/3*2, h-20, text="END",
+                                font=('Helvetica 11 bold'), fill="#74C365")
 
 
 if __name__ == "__main__":
