@@ -18,9 +18,9 @@ for x in range(10):
             rand = random.random()
             if rand <= 0.5 and rand > 0:
                 grid[i][j] = "N"
-            elif rand > 0.5 and rand > 0.7:
+            elif rand > 0.5 and rand < 0.7:
                 grid[i][j] = "H"
-            elif rand > 0.7 and rand > 0.9:
+            elif rand > 0.7 and rand < 0.9:
                 grid[i][j] = "T"
             else:
                 grid[i][j] = "B"
