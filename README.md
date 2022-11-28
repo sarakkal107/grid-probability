@@ -7,3 +7,10 @@ In order to generate the test maps and corresponding data, run the generate.py s
 
 ## Step 2: Visualization
 In order to visualize the test maps and corresponding data, run the visualize.py script. Change the folder, mapFile variable, and dataFile variable in order to change which visualization is seen.
+
+# Rejection Sampling and Likelihood Weighting
+The scripts used for rejection sampling and likelihood weighting are located in the problem_3 folder. 
+## Rejection Sampling
+The script for rejection sampling is rejection_sampling.py. Running this script would calculate the probabilities for the three queries for Part b of Question 3 and create the plot for Part d. There is a commented section for the plot of part c in the script.
+## Likelihood Weighting
+The script for likelihood weighting is likelihood_weighting.py. This script pulls the weighted_sample and likelihood_weighting functions from the likelihood_functions.py script. Running this script would calculate the probabilities for the three queries for Part b of Question 3 and create the plot for Part d. There is a commented section for the plot of part c in the script.
