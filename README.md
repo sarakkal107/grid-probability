@@ -6,7 +6,7 @@ In order to generate the test maps and corresponding data, run the generate.py s
 *** NOTE: When generating the files, we do utilize index 0, so all generated paths also utilize 0. To match up with the visualization, we added 1 to each coordinate. ***
 
 ## Step 2: Visualization
-In order to visualize the test maps and corresponding data, run the visualize.py script using "python visualize.py". Change the folder, mapFile variable, and dataFile variable in order to change which visualization is seen. There is a scrollbar on the right of the window if the window is too large to see the entire grid and legend at the bottom.
+In order to visualize the test maps and corresponding data, run the visualize.py script using "python visualize.py". Change the folder, mapFile variable, and dataFile variable in order to change which visualization is seen. There is a scrollbar on the right of the window if the window is too large to see the entire grid, actions, and legend at the bottom.
 
 # Rejection Sampling and Likelihood Weighting
 The scripts used for rejection sampling and likelihood weighting are located in the problem_3 folder. 
