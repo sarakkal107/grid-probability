@@ -1,5 +1,5 @@
 from itertools import count
-import tkinter as tk
+import Tkinter as tk
 import random
 
 
