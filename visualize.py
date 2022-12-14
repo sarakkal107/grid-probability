@@ -1,5 +1,5 @@
 from itertools import count
-import Tkinter as tk
+import tkinter as tk
 import random
 
 
@@ -52,7 +52,8 @@ class App(tk.Tk):
         self.canvas.pack(side="top", fill="both", expand="true")
         self.title("Data Visualization")
         self.frame = tk.Frame(self.canvas, background="#ffffff")
-        self.vsb = tk.Scrollbar(self, orient="vertical", command=self.canvas.yview)
+        self.vsb = tk.Scrollbar(self, orient="vertical",
+                                command=self.canvas.yview)
         self.canvas.configure(yscrollcommand=self.vsb.set)
         self.vsb.pack(side="right", fill="y")
         self.canvas.pack(side="left", fill="both", expand=True)
