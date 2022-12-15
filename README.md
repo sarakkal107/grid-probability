@@ -16,5 +16,8 @@ The script for rejection sampling is rejection_sampling.py. Run this script with
 The script for likelihood weighting is likelihood_weighting.py. Run this script with the command "python3 rejection_sampling.py". This script pulls the weighted_sample and likelihood_weighting functions from the likelihood_functions.py script. Running this script would calculate the probabilities for the three queries for Part b of Question 3 and create the plot for Part d. There is a commented section for the plot of part c in the script.
 
 # Markov Decision Process (MDP)
-
-The script for Markov Decision Process is mdp.py. Run this script with the command "python3 mdp.py". In order to get the values of our optimal utilies, optimal policies, interation number, and computation time, one can run value_iteration.py. Run this script with the command "python3 value_iteration.py". Running these scripts will calculate information needed for Question 7. More specifically, these files in conjucntion show the utilization of original utilities (7a), the intermediate results (7b), and the implementation of the optimal utilies algorithm & optimal policies algorithm (7c).
+The scripts used for MDP and Value Iteration are located in the problem_7 folder. 
+## MDP
+The script for Markov Decision Process is mdp.py. Run this script with the command "python3 mdp.py". 
+##Value Iteration
+In order to get the values of our optimal utilies, optimal policies, interation number, and computation time, one can run value_iteration.py. Run this script with the command "python3 value_iteration.py". Running these scripts will calculate information needed for Question 7. More specifically, these files in conjucntion show the utilization of original utilities (7a), the intermediate results (7b), and the implementation of the optimal utilies algorithm & optimal policies algorithm (7c).
