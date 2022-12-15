@@ -18,6 +18,6 @@ The script for likelihood weighting is likelihood_weighting.py. Run this script 
 # Markov Decision Process (MDP)
 The scripts used for MDP and Value Iteration are located in the problem_7 folder. 
 ## MDP
-The script for Markov Decision Process is mdp.py. Run this script with the command "python3 mdp.py". 
+The script for Markov Decision Process is mdp.py. Run this script with the command "python3 mdp.py". This script is intened to hold a state (node) in the MDP.
 ## Value Iteration
 In order to get the values of our optimal utilies, optimal policies, interation number, and computation time, one can run value_iteration.py. Run this script with the command "python3 value_iteration.py". Running these scripts will calculate information needed for Question 7. More specifically, these files in conjucntion show the utilization of original utilities (7a), the intermediate results (7b), and the implementation of the optimal utilies algorithm & optimal policies algorithm (7c).
