@@ -7,7 +7,7 @@ class Node:
 # setup MDP with
 # a set of states,
 # a transition model,
-# and a discount value of 0.9
+# and a discount value of 0.90
 class MDP:
     def __init__(self):
         self.states = self.init_states()
