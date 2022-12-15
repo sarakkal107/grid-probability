@@ -26,7 +26,7 @@ def value_iteration(mdp, threshold):
         iterations += 1
         print(str(iterations) + ": " + str(prev_u) +
               "\n\t" + "a" + str(optimal_policy(mdp, prev_u)))
-    print("Iterations: " + str(iterations))
+    print("Number of Iterations: " + str(iterations))
     # Return U
     return prev_u
 
